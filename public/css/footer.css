@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 200vh;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+/* footer css */
+.footer{
+    background-color: #fcc046;
+    padding: 30px 0 0;
+}
+.pb-1 {
+    padding-bottom: .7rem !important;
+}
+.footer .foot-nav p{
+    font-size: 20px;
+    /* font-family: Croissant One; */
+    /* padding-left: 2rem; */
+}
+.footer ul li {
+   line-height: 26px;
+}
+
+.footer .foot-nav li{
+   list-style: none;
+}
+.footer .foot-nav li a{
+   text-decoration: none;
+   line-height: 26px;
+   color: #000;
+   font-size: 14px;
+}
+.footer ul li a {
+    /* justify-content: left; */
+    font-size: 14px;
+}
+.footer .foot-nav li a:hover{
+  color: #fff;
+}
+
+.footer .one p {
+    margin-left: 1.5rem;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5a3500;
+}
+.footer .foot-nav .two{
+    border-right: 2px solid #f99c19;
+}
+.footer .foot-nav .three{
+    border-right: 2px solid #f99c19;
+}
+
+.footer .foot-nav .four ul{
+    margin-left: -2rem;
+    margin-bottom: -0.3rem;
+}
+.foot-nav .footer-text{
+    border-top:2px solid #f99c19;
+    text-align: center;
+} 

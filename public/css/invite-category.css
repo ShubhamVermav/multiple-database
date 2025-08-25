@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 200vh;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+/* invite section */
+.invite-category {
+    background-image: url("../images/cards/white-bg.webp");
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+}
+.invite-category .heading{
+    text-align: center;
+}
+.sub-heading {
+    text-align: center;
+    font-family: Croissant One;
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 30px;
+    letter-spacing: 3px;
+}
+.invite-category .heading-para{
+    text-align: center;
+}
+@media (max-width:1024px) {
+    .invite-category .sub-heading {
+       display: none;
+    }
+    .invite-category .heading-para{
+        display: none;
+    }
+}
+
+.invite-category .container{
+    display: flex;
+    flex-direction: column;
+}
+.invite-category .card {
+    width: 100%;
+    height: 100%;
+    border: 5px solid rgba(5, 5, 5, 0.05);;
+    border-radius: 10px;
+    box-shadow: 0 4px 60px 30px rgba(0, 0, 0, .05);
+    cursor: pointer;
+}
+@media (max-width:767px) {
+     .invite-category .box-card{
+      padding: 0px 30px;
+    }
+}
+
+.invite_btn{
+    color: #000;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+}
+.invite_btn:hover{
+    color: #fff;
+    background-color: #ffca2c;
+    border: 1px solid #ffc720;
+}
+
+.invite-category .heading, .trending-invitation .heading {
+    position: relative;
+    padding: 30px 0px;
+    font-weight: bold;
+}
+
+.invite-category .heading::before, .trending-invitation .heading::before {
+    content: "";
+    background-image: url("../images/cards/heading-design1.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: 0;
+    left: calc(50% - 109px);
+    width: 240px;
+    height: 20px;
+    position: absolute;
+    z-index: 99;
+}
+
+
+.invite-category .heading::after, .trending-invitation .heading::after {
+    content: "";
+    background-image: url("../images/cards/heading-design2.webp");
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    bottom: 0;
+    left: calc(50% - 109px);
+    width: 240px;
+    height: 20px;
+    position: absolute;
+    z-index: 99;
+}
+.invite-category .invite_btn{
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 14px;
+    padding: 12px 20px;
+    background: linear-gradient(98deg, #f1c34d 7.22%, #f69d26 93.03%);
+   
+}
+.invite-category .invite_btn:hover{
+    color: #fff;
+    background-color: #ffca2c;
+    border: 1px solid #ffc720;
+}

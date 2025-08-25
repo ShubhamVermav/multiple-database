@@ -1,0 +1,218 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 200vh;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+.header {
+    width: 100%;
+    background-color: #f8f9fa;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;    
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+.header .container {
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 0;
+    font-weight: 500;
+    margin: auto; 
+}
+
+.nav-item {
+    padding: 0 10px;
+}
+
+.navbar-nav .nav-item {
+    list-style: none;
+    margin: 0rem 1rem;
+}
+
+.navbar-nav .nav-item:hover {
+    color: #fbcc53;
+    cursor: pointer;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #fbcc53;
+}
+
+button.btn.nav-btn {
+    font-weight: 500;
+    border: 2px solid #fcc046;
+    border-radius: 7px;
+    padding: 6px 17px;
+    font-size: 10px;
+    margin-left: 12px;
+}
+
+.sale_logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.sale_logo .marathi {
+    margin-left: 15px;
+}
+
+.navbar-collaps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-icon {
+    display: none;
+}
+
+
+@media (max-width: 1200px) {
+    .navbar-collapse.show .navbar-nav {
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        display: none;
+        
+    }
+    .navbar-toggler{
+        display: block !important;
+          margin: 10px 0;
+    }
+}
+
+
+
+@media (max-width: 767px) {
+
+    .navbar-collapse.show .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-nav .nav-item {
+        display: block;
+        width: 100%;
+    }
+
+    .navbar .d-flex.align-items-center {
+        margin-left: auto;
+    }
+
+    button.nav-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+
+    .sale_logo .logocard {
+        display: none;
+    }
+    
+    .sub-navbar .sub-cat {
+        font-size: 14px !important;
+    }
+    
+    .sub-navbar-nav .engg, 
+    .sub-navbar-nav .tilak {
+        display: none;
+    }
+    button.btn.nav-btn {
+        border-radius: 5px;
+        padding: 6px 7px;
+        font-size: 10px;
+    }
+    .sale_logo .marathi {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .sub-navbar-nav .punjabi {
+        display: none;
+    }
+}
+
+/* Sub navbar CSS */
+.sub-navbar {
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 500;
+    box-shadow: 0 20px 10px -20px rgba(0,0,0,0.45) inset;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 55px;
+    padding: 10px 0;
+}
+
+@media (max-width: 1400px) {
+    .sub-navbar {
+        min-height: 70px !important;
+    }
+    
+    .sub-navbar-nav {
+        margin-top: 10px;
+    }
+}
+
+.sub-navbar-nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-navbar .nav-item {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+.sub-navbar-nav .nav-item:hover {
+    color: #fbcc53;
+    cursor: pointer;
+}
+
+.sub-navbar .sub-cat {
+    color: red;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.sub-navbar .coupon_code {
+    color: brown;
+    margin-left: 8px;
+    font-size: 24px;
+    font-weight: 100;
+}

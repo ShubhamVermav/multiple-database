@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 200vh;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+/* announment section */
+.announcment-heading .highlight{
+   color: #FBBF00;
+}
+.announcment-heading {
+    color: #fff;
+    font-size: 44px;
+    font-weight: 700;
+}
+.announcment .announcment-para{
+    color: #fff;
+    font-size: 22px;
+}
+@media (max-width:767px) {
+    .announcment .announcment-para{
+        font-size: 16px;
+    }
+    .announcment-heading {
+       font-size: 22px;
+    }
+}
+.announcment{
+    background-image: url("../images/Background.webp");
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+}
+@media (max-width:576px) {
+    .announcment{
+        display: none;
+    }
+}
+@media (max-width:900px) {
+    .announcment .img-fluid{
+        display: none;
+    }
+}
+.announcment .invite_btn{
+    color: #000;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 14px;
+    padding: 12px 20px;
+    background: linear-gradient(98deg, #f1c34d 7.22%, #f69d26 93.03%);
+   
+}
+.announcment .invite_btn:hover{
+    color: #fff;
+    background-color: #ffca2c;
+    border: 1px solid #ffc720;
+}

@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    width: 100%;
+    min-height: 200vh;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+/* Trending-Invitation */
+.trending-invitation {
+    background-image: url("../images/treding/trending_invitation_bg_image.webp");
+    width: 100%; 
+    background-size: cover;
+    background-position: center;
+}
+.trending-invitation p{
+    color: #505960;
+    font-size: 14px;
+}
+.trending-invitation .card{
+    border: 5px solid #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 60px 30px rgba(0, 0, 0, .05);
+    cursor: pointer;
+}
+@media (max-width:430px) {
+     .trending-invitation .card{
+      margin-left: 10px;
+    }
+}
+.trending-invitation .card:hover .hover{
+    display: flex;
+} 
+.trending-invitation .cards .hover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+ 
+}
+.trending-invitation .cards .invite_btn{
+    background-color: #ffca2c;
+}
