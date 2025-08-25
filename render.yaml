@@ -2,28 +2,11 @@ services:
   - type: web
     name: laravel-app
     env: php
-    buildCommand: |
-      composer install --no-dev --optimize-autoloader
-      php artisan config:cache
-      php artisan route:cache
-      php artisan view:cache
-    startCommand: php artisan serve --host 0.0.0.0 --port $PORT
+    buildCommand: composer install && php artisan key:generate && php artisan config:cache
+    startCommand: php artisan serve --host 0.0.0.0 --port 10000
     envVars:
       - key: APP_ENV
         value: production
       - key: APP_KEY
-        generateValue: true
-      - key: APP_DEBUG
-        value: false
-      - key: DB_CONNECTION
-        value: mysql
-      - key: DB_HOST
-        value: gateway01.ap-southeast-1.prod.aws.tidbcloud.com
-      - key: DB_PORT
-        value: 4000
-      - key: DB_DATABASE
-        value: test
-      - key: DB_USERNAME
-        value: 3gTJSoZ4iS36bBz.root
-      - key: DB_PASSWORD
-        value: 3UoftLlmmcsm3NvI
+        sync: false
+
