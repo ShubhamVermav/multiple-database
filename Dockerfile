@@ -16,7 +16,9 @@ RUN composer install --no-dev --optimize-autoloader
 # Permissions
 RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Expose port
-EXPOSE 80
+# Expose the port Render expects
+ENV PORT=5000
+EXPOSE 5000
 
-CMD ["php-fpm"]
+# Start Laravel's built-in HTTP server
+CMD php artisan serve --host=0.0.0.0 --port=$PORT
