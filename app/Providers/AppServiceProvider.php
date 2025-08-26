@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,13 +24,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
-
-     // change the user to main user by this code 
-    // Request::macro('mainuser', function () {
-    //     return $this->user(); // or return Auth::user();
-    // });
-
-
+        if (env('APP_ENV') !== 'local') {
+            URL::forceScheme('https');
+        }
     }
 }
